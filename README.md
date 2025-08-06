@@ -43,31 +43,31 @@ python
 Редагувати
 book = AddressBook()
 
-# Додаємо запис для John
+ Додаємо запис для John
 john_record = Record("John")
 john_record.add_phone("1234567890")
 john_record.add_phone("5555555555")
 book.add_record(john_record)
 
-# Додаємо запис для Jane
+ Додаємо запис для Jane
 jane_record = Record("Jane")
 jane_record.add_phone("9876543210")
 book.add_record(jane_record)
 
-# Виводимо всі записи
+Виводимо всі записи
 for name, record in book.data.items():
     print(record)
 
-# Редагуємо телефон John
+Редагуємо телефон John
 john = book.find("John")
 john.edit_phone("1234567890", "1112223333")
 print(john)
 
-# Шукаємо конкретний телефон
+ Шукаємо конкретний телефон
 found_phone = john.find_phone("5555555555")
 print(f"{john.name}: {found_phone}")
 
-# Видаляємо запис Jane
+ Видаляємо запис Jane
 book.delete("Jane")
 💡 Приклад виводу
 text
